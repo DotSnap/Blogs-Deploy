@@ -1,0 +1,54 @@
+body {
+    overflow: hidden;
+}
+
+body>* {
+    /* transition: all 1000ms ease-in-out; */
+    animation: identifier 1000ms ease-in-out;
+}
+
+@keyframes identifier {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.floatingShape {
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+}
+
+.trail-div {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.trail-canvas {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    /* right: 0px;
+    left: 0px;
+    bottom: 0px;
+    top: 0px; */
+
+    pointer-events: none;
+    z-index: 10;
+}
+
+.avatar {
+    transition: opacity 1s ease-in-out;
+}
+
+.text-changed {
+    /* transform: scale(1.05); */
+    transition: all 200ms ease-in-out;
+    filter: blur(2px);
+}
